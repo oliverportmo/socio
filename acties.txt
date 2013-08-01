@@ -1,0 +1,42 @@
+acties
+
+
+
+
+website
+- facebook like
+- tweet
+
+
+
+facebook pagina
+- facebook like (werkt niet)
+- tweet
+
+
+facebook profiel
+- facebook follow
+
+
+twitter account 
+- follow
+
+
+tweet
+- retweet
+
+
+bericht
+- post on facebook profile
+- tweet
+
+pagina : social entities
+
+facebook likes : websites + fb pagina
+facebook follow : fb profiel
+facebook post : fb bericht
+twitter tweet : website + facebook + tweetbericht 
+twitter follow: twitter account
+twitter retweet: tweet
+
+

@@ -1,0 +1,46 @@
+language: php 
+
+php: 
+ - 5.3
+ - 5.4
+
+env:
+ - DB=MYSQL CORE_RELEASE=3.1
+ - DB=PGSQL CORE_RELEASE=3.1
+ - DB=SQLITE3 CORE_RELEASE=3.1
+ - PHPCS=1 CORE_RELEASE=3.1
+
+matrix:
+  exclude:
+    - php: 5.4
+      env: DB=PGSQL CORE_RELEASE=3.1
+    - php: 5.4
+      env: DB=SQLITE3 CORE_RELEASE=3.1
+    - php: 5.4
+      env: PHPCS=1 CORE_RELEASE=3.1
+  allow_failures:
+    - env: DB=PGSQL CORE_RELEASE=3.1
+    - env: DB=SQLITE3 CORE_RELEASE=3.1
+    - env: PHPCS=1 CORE_RELEASE=3.1
+
+before_script:
+ - git clone git://github.com/silverstripe-labs/silverstripe-travis-support.git ~/travis-support
+ - php ~/travis-support/travis_setup.php --source `pwd` --target ~/builds/ss
+ - cd ~/builds/ss
+
+script: 
+ - phpunit cms/tests/
+
+branches:
+  except:
+    - 2.1
+    - 2.2
+    - 2.3
+    - 2.4
+    - post-2.4
+    - translation-staging
+
+notifications:
+  irc:
+    channels:
+     - "irc.freenode.org#silverstripe"
