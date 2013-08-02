@@ -6,7 +6,8 @@ class SocialEntity extends DataObject {
 			'Description' => 'Text',
 			'Link' => 'Text',
 			'MaxCoins' => 'Int',
-			'CPC' => 'Int'
+			'CPC' => 'Int',
+			'Type' => 'Enum("FacebookProfile, TwitterAccount, GoogleAccount, Website, FacebookPage, Tweet","FacebookPage")'
 	);
 
 	public static $has_one = array(

@@ -15,10 +15,9 @@
 				<div class="navbar"><div class="navbar-inner"><h6>Welkom, {$CurrentMember.FirstName}!</h6></div></div>
 	            <a href="#" title="" class="user"><img src="http://placehold.it/210x110" alt="" /></a>
 	            <ul class="user-links">
-	            	<li><a href="" title="">Profiles & Accounts<strong>1</strong></a></li>
-	            	<li><a href="" title="">Websites<strong>0</strong></a></li>
-	            	<li><a href="" title="">Facebook Pages<strong>1</strong></a></li>
-	            	<li><a href="" title="">Tweets<strong>1</strong></a></li>
+	            	<% loop ChildrenOf(user) %>
+	            		<li><a href="$Link" title="$MenuTitle.XML">$MenuTitle.XML<strong>1</strong></a></li>
+	            	<% end_loop %>
 	            </ul>
 	        </div>
 	        <!-- /sidebar user -->

@@ -2,7 +2,8 @@
 class MemberExtension extends DataExtension {
 
 	public static $db = array(
-		'TotalCoins' => 'Int'
+		'TotalCoins' => 'Int',
+		'Type' => 'Enum("Regular,Pro","Regular")'
 	);
 
 	public static $has_many = array(
