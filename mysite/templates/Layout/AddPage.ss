@@ -26,6 +26,8 @@
 				</div>
 	         </div>
 	         
+	         </div><div class="row-fluid">
+	         
 	         <div class="span6">
 	        	<div class="widget">
 					<div class="navbar"><div class="navbar-inner"><h6>Google Account</h6></div></div>
